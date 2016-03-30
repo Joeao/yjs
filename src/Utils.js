@@ -280,8 +280,8 @@ module.exports = function (Y /* : any*/) {
       I tried to optimize this for performance, therefore no highlevel operations.
     */
     class SmallLookupBuffer extends Store {
-      constructor () {
-        super(...arguments)
+      constructor (read, write) {
+        super()
         this.writeBuffer = createEmptyOpsArray(5)
         this.readBuffer = createEmptyOpsArray(10)
       }
